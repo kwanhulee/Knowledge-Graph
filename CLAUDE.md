@@ -6,7 +6,7 @@ PDF 문서를 업로드하면 핵심 개념과 관계를 추출해 지식 그래
 
 1. **PDF 업로드** — 사용자가 Streamlit UI에서 PDF 파일 업로드
 2. **텍스트 추출/청킹** — PDF에서 텍스트를 추출하고 적절한 크기로 청크 분할
-3. **LLM 추출** — Gemini API(`gemini-2.5-flash`)에 청크를 전달해 핵심 개념(node)과 관계(edge)를 JSON으로 추출
+3. **LLM 추출** — Gemini API(`gemini-flash-latest`)에 청크를 전달해 핵심 개념(node)과 관계(edge)를 JSON으로 추출
 4. **그래프 시각화** — `streamlit-agraph`로 노드/엣지 렌더링
 5. **원문 표시** — 그래프에서 노드 클릭 시 해당 개념의 근거가 된 원문(출처 청크)을 표시
 
@@ -15,7 +15,7 @@ PDF 문서를 업로드하면 핵심 개념과 관계를 추출해 지식 그래
 - Python 3.9+
 - Streamlit
 - streamlit-agraph
-- Gemini API (`gemini-2.5-flash`)
+- Gemini API (`gemini-flash-latest`) — 원래 목표는 `gemini-2.5-flash`였으나 현재 프로젝트 API 키에서는 해당 모델 호출이 404(신규 사용자 미제공)로 막혀 있어 대체함. `src/gemini_client.py`의 `DEFAULT_MODEL` 참고
 
 ## 핵심 제약사항
 

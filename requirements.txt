@@ -2,3 +2,4 @@ streamlit
 streamlit-agraph
 google-genai
 pdfplumber
+python-dotenv
